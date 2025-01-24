@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_2/pages/sign.dart';
-import 'package:netflix_2/pages/privacy.dart';
+import 'package:netflix_2/pages/home.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+
+class Privacy extends StatefulWidget {
+  const Privacy({super.key});
 
   @override
-  State<Home> createState() => HomeState();
+  State<Privacy> createState() => PrivacyState();
 }
 
-class HomeState extends State<Home> {
-  int counter = 0;
+class PrivacyState extends State<Privacy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,16 +55,15 @@ class HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Nbr : $counter ",
+              "Privacy",
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            counter += 1;
-          });
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Sign()));
         },
         child: const Icon(Icons.add),
       ),

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:netflix_2/pages/home.dart';
+import 'package:netflix_2/pages/onboarding.dart';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -23,7 +23,7 @@ class LoadingState extends State<Loading> {
 
   void onLoaded() {
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
+        .pushReplacement(MaterialPageRoute(builder: (context) => Onboarding()));
   }
 
   @override
