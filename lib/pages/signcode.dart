@@ -21,7 +21,7 @@ class SignCodeState extends State<SignCode> {
     return Scaffold(
       backgroundColor: Colors.black,
        
-      appBar: AppBar(
+        appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.black,
         leading: const Image(
@@ -53,7 +53,9 @@ class SignCodeState extends State<SignCode> {
                     .push(MaterialPageRoute(builder: (context) => Home()));
               },
               child: Icon(
-                Icons.home,
+                Icons.more_vert,
+                size: 25,
+                color: Colors.white,
               ))
         ],
       ),

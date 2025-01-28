@@ -23,7 +23,7 @@ class SignUpState extends State<SignUp> {
     return Scaffold(
       backgroundColor: Colors.black,
      
- appBar: AppBar(
+  appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.black,
         leading: const Image(
@@ -55,7 +55,9 @@ class SignUpState extends State<SignUp> {
                     .push(MaterialPageRoute(builder: (context) => Home()));
               },
               child: Icon(
-                Icons.home,
+                Icons.more_vert,
+                size: 25,
+                color: Colors.white,
               ))
         ],
       ),

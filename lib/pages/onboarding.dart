@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_2/pages/home.dart';
-import 'package:netflix_2/pages/widget/onbording.dart';
 import 'package:netflix_2/pages/sign.dart';
 import 'package:netflix_2/pages/privacy.dart';
+import 'package:netflix_2/pages/home.dart';
+import 'package:netflix_2/pages/widget/onbording.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -20,9 +20,9 @@ class OnboardingState extends State<Onboarding> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
-      appBar: AppBar(
+        appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.black,
         leading: const Image(
           image: AssetImage("assets/images/symbol.png"),
         ),
@@ -52,7 +52,9 @@ class OnboardingState extends State<Onboarding> {
                     .push(MaterialPageRoute(builder: (context) => Home()));
               },
               child: Icon(
-                Icons.home,
+                Icons.more_vert,
+                size: 25,
+                color: Colors.white,
               ))
         ],
       ),
@@ -117,15 +119,14 @@ class OnboardingState extends State<Onboarding> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Home()));
+                      Navigator.of(context).pushNamed('/home');
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(0))),
-                    child: Text("Get Started "),
+                    child: const Text("Get Started "),
                   ),
                 )
               ],

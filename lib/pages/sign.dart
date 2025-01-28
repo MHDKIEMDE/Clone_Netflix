@@ -24,7 +24,7 @@ class SignState extends State<Sign> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
+        appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.black,
         leading: const Image(
@@ -56,7 +56,9 @@ class SignState extends State<Sign> {
                     .push(MaterialPageRoute(builder: (context) => Home()));
               },
               child: Icon(
-                Icons.home,
+                Icons.more_vert,
+                size: 25,
+                color: Colors.white,
               ))
         ],
       ),

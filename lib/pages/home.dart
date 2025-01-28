@@ -46,7 +46,9 @@ class HomeState extends State<Home> {
                     .push(MaterialPageRoute(builder: (context) => Home()));
               },
               child: Icon(
-                Icons.home,
+                Icons.more_vert,
+                size: 25,
+                color: Colors.white,
               ))
         ],
       ),
@@ -55,18 +57,10 @@ class HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Nbr : $counter ",
+              "Home",
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            counter += 1;
-          });
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }
